@@ -1,5 +1,3 @@
-#define MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
-
 void matrix_multiplyf (
     void *Out, 
     void *A, 
@@ -8,6 +6,8 @@ void matrix_multiplyf (
     int c1r2, 
     int c2)
 {    
+    #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
+
     int i;
     int j;    
     int k;    
@@ -31,4 +31,6 @@ void matrix_multiplyf (
             ((float *)Out)[MATRIX_INDEX(c2 ,i, j)] = tmp;
         }
     }
+    
+    #undef __MATRIX_INDEX
 }
