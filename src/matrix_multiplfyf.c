@@ -1,6 +1,6 @@
-#define MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) \
-    __RowLength * __RowIndex + __ColumnIndex
-void matrix_multiplyf(
+#define MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
+
+void matrix_multiplyf (
     void *Out, 
     void *A, 
     void *B, 
