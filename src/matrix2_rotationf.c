@@ -1,3 +1,6 @@
+extern double sin(double);
+extern double cos(double);
+
 void matrix2_rotationf (
     void *Out,
     float angle,

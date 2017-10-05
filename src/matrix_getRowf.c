@@ -1,3 +1,5 @@
+extern void *memcpy(void *, void *, unsigned int);
+
 void matrix_getRowf (
     void *Out,
     void *In,

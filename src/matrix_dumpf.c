@@ -1,4 +1,5 @@
 extern int printf(const char *, ...);
+extern int putchar(int);
 
 void matrix_dumpf(void *M, int rows, int columns)
 {   
@@ -10,7 +11,7 @@ void matrix_dumpf(void *M, int rows, int columns)
         for (j = 0; j < columns; ++j) {
             float cur;
             
-            cur = ((float *)M)[MATRIX_INDEX(columns, i, j)]; 
+            cur = ((float *)M)[__MATRIX_INDEX(columns, i, j)]; 
             printf("%.3f", cur);
             if (j != columns - 1) {
                 putchar(' ');

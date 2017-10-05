@@ -19,8 +19,8 @@ void matrix_multiplyf (
             tmp = 0;
             
             for (k = 0; k < c1r2; ++k) {       
-                float tmp1 = ((float *)A)[MATRIX_INDEX(c1r2, i, k)];
-                float tmp2 = ((float *)B)[MATRIX_INDEX(c2, k, j)];
+                float tmp1 = ((float *)A)[__MATRIX_INDEX(c1r2, i, k)];
+                float tmp2 = ((float *)B)[__MATRIX_INDEX(c2, k, j)];
           
                 tmp = tmp
                     + tmp1
@@ -28,7 +28,7 @@ void matrix_multiplyf (
                     ;
             }
             
-            ((float *)Out)[MATRIX_INDEX(c2 ,i, j)] = tmp;
+            ((float *)Out)[__MATRIX_INDEX(c2 ,i, j)] = tmp;
         }
     }
     
