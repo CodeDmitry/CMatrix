@@ -1,3 +1,5 @@
+extern int printf(const char *, ...);
+
 void matrix_dumpf(void *M, int rows, int columns)
 {   
     #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
