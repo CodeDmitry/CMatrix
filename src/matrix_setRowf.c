@@ -13,7 +13,7 @@ void matrix_setRowf (
     
     rowStartIndex = __MATRIX_ROWSTARTOFFSET(ColumnsPerRow, RowIndex);    
     
-    for (i = 0; i < rowStartIndex; ++i) {
+    for (i = 0; i < 4; ++i) {
         ((float *)Out)[rowStartIndex + i] = ((float *)In)[i];
     }
     
