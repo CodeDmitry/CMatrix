@@ -1,7 +1,7 @@
 #include <stdint.h>
 
 void matrix_scaleColumnf (
-    void *InOut, 
+    void *Target, 
     uint32_t NumberOfRows,
     uint32_t ColumnsPerRow, 
     uint32_t ColumnIndex, 
@@ -12,7 +12,7 @@ void matrix_scaleColumnf (
     uint32_t i;
 
     for (i = 0; i < NumberOfRows; ++i) {
-        ((float *)InOut)[__MATRIX_INDEX(ColumnsPerRow, i, ColumnIndex)] *= Coefficient;
+        ((float *)Target)[__MATRIX_INDEX(ColumnsPerRow, i, ColumnIndex)] *= Coefficient;
     }
     
     #undef __MATRIX_INDEX

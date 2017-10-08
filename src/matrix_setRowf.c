@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-void matrix_getRowf (
+void matrix_setRowf (
     void *Out,
     void *In,
     uint32_t RowIndex,
@@ -14,7 +14,7 @@ void matrix_getRowf (
     rowStartIndex = __MATRIX_ROWSTARTOFFSET(ColumnsPerRow, RowIndex);    
     
     for (i = 0; i < rowStartIndex; ++i) {
-        ((float *)Out)[i] = ((float *)In)[rowStartIndex + i];
+        ((float *)Out)[rowStartIndex + i] = ((float *)In)[i];
     }
     
     #undef __MATRIX_ROWSTARTOFFSET
