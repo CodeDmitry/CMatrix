@@ -1,21 +1,23 @@
-void matrix_identityf(void *M, int Size, float Value)
+#include <stdint.h>
+
+void matrix_identityf(void *Out, uint32_t Size, float Coefficient)
 {
     #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
 
-    int i;
-    int j;
+    uint32_t i;
+    uint32_t j;
     
     for (i = 0; i < Size; ++i) {
         for (j = 0; j < Size; ++j) {
             float val;
             
             if (i == j) {
-                val = Value;
+                val = Coefficient;
             } else {
                 val = 0;
             }
             
-            ((float *)M)[__MATRIX_INDEX(Size, i, j)] = val;
+            ((float *)Out)[__MATRIX_INDEX(Size, i, j)] = val;
         }
     }
     

@@ -1,18 +1,20 @@
+#include <stdint.h>
+
 extern double sin(double);
 extern double cos(double);
 
 void matrix2_rotationf (
     void *Out,
     float angle,
-    unsigned int option_bits)
+    uint32_t flags)
 {    
-    #define __DEGREE_BIT 0
+    #define __RADIANS_FLAG 0x1
     #define __PI_F 3.14159265358979f
     
     float cos_angle;
     float sin_angle;
 
-    if (option_bits & (0x1 << __DEGREE_BIT)) {
+    if (!(flags & __RADIANS_FLAG)) {
         angle *= (__PI_F / 180.f);
     }        
     
@@ -25,5 +27,5 @@ void matrix2_rotationf (
     ((float *)Out)[3] = cos_angle;    
         
     #undef __PI_F
-    #undef __DEGREE_BIT
+    #undef __RADIANS_FLAG
 }

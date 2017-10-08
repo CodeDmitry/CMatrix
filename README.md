@@ -1,2 +1,4 @@
 # CMatrix
-Matrices for C
+
+Extremely lightweight and fast sugarfree matrices.
+

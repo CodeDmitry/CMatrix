@@ -1,16 +1,18 @@
+#include <stdint.h>
+
 void matrix_multiplyf (
     void *Out, 
     void *A, 
     void *B, 
-    int r1, 
-    int c1r2, 
-    int c2)
+    uint32_t r1, 
+    uint32_t c1r2, 
+    uint32_t c2)
 {    
     #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
 
-    int i;
-    int j;    
-    int k;    
+    uint32_t i;
+    uint32_t j;    
+    uint32_t k;    
     
     for (i = 0; i < r1; ++i) {
         for (j = 0; j < c2; ++j) {

@@ -1,23 +1,30 @@
-extern int printf(const char *, ...);
-extern int putchar(int);
+#include <stdint.h>
 
-void matrix_dumpf(void *M, int rows, int columns)
+extern int fprintf(void *, const char *, ...);
+extern int fputc(int, void *);
+
+void matrix_dumpf (
+    void *Stream, 
+    void *Matrix, 
+    uint32_t NumberOfRows, 
+    uint32_t ColumnsPerRow)
 {   
     #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
 
-    int i, j;
+    uint32_t i;
+    uint32_t j;
     
-    for (i = 0; i < rows; ++i) {
-        for (j = 0; j < columns; ++j) {
+    for (i = 0; i < NumberOfRows; ++i) {
+        for (j = 0; j < ColumnsPerRow; ++j) {
             float cur;
             
-            cur = ((float *)M)[__MATRIX_INDEX(columns, i, j)]; 
-            printf("%.3f", cur);
-            if (j != columns - 1) {
-                putchar(' ');
+            cur = ((float *)Matrix)[__MATRIX_INDEX(ColumnsPerRow, i, j)]; 
+            fprintf(Stream, "%.3f", cur);
+            if (j != ColumnsPerRow - 1) {
+                fputc(' ', Stream);
             }
         }
-        putchar('\n');
+        fputc('\n', Stream);
     }
     
     #undef __MATRIX_INDEX

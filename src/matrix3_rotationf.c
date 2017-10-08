@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 extern double sin(double);
 extern double cos(double);
 
@@ -6,9 +8,9 @@ void matrix3_rotationf (
     float xangle,
     float yangle,
     float zangle,
-    unsigned int option_bits)
+    uint32_t flags)
 {    
-    #define __DEGREE_BIT 0
+    #define __RADIANS_FLAG 0x1
     #define __PI_F 3.14159265358979f
     
     float cosA;
@@ -21,7 +23,7 @@ void matrix3_rotationf (
     float cosBsinA;
     float sinBsinA;
 
-    if (option_bits & (0x1 << __DEGREE_BIT)) {
+    if (!(flags & __RADIANS_FLAG)) {
         float conversion;
         conversion = __PI_F / 180.f;
         xangle *= conversion;
@@ -50,5 +52,5 @@ void matrix3_rotationf (
     ((float *)Out)[8] = cosB*cosA;
                 
     #undef __PI_F
-    #undef __DEGREE_BIT
+    #undef __RADIANS_FLAG
 }

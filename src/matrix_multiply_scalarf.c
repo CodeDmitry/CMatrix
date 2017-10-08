@@ -1,12 +1,15 @@
+#include <stdint.h>
+
 void matrix_multiply_scalarf (
     void *Out, 
     void *In, 
-    float Coefficient, 
-    int Rows, 
-    int ColumnsPerRow) 
+    uint32_t Coefficient, 
+    uint32_t NumberOfRows, 
+    uint32_t ColumnsPerRow) 
 {
-    int i;
-    for (i = 0; i < Rows * ColumnsPerRow; ++i) {
+    uint32_t i;
+    
+    for (i = 0; i < NumberOfRows * ColumnsPerRow; ++i) {
         ((float *)Out)[i] = ((float *)In)[i] * Coefficient;
     }
 }

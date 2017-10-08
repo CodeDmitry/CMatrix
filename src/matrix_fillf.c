@@ -1,6 +1,12 @@
-void matrix_fillf(void *Out, float Value, int Rows, int Columns) 
+#include <stdint.h>
+
+void matrix_fillf(
+    void *Out, 
+    float Value, 
+    uint32_t Rows, 
+    uint32_t Columns) 
 {    
-    int i;
+    uint32_t i;
 
     for (i = 0; i < Rows * Columns; ++i) {
         ((float *)Out)[i] = Value;

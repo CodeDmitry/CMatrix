@@ -1,13 +1,15 @@
+#include <stdint.h>
+
 void matrix_addf (
     void *Out, 
     void *A, 
     void *B, 
-    int r, 
-    int c)
+    uint32_t NumberOfRows, 
+    uint32_t ColumnsPerRow)
 {    
-    int i;
+    uint32_t i;
     
-    for (i = 0; i < r * c; ++i) {
+    for (i = 0; i < NumberOfRows * ColumnsPerRow; ++i) {
         ((float *)Out)[i] = ((float *)A)[i] + ((float *)B)[i];
     }
 }
