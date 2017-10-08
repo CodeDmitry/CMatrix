@@ -99,7 +99,7 @@ extern void matrix3_rotationf (
     float xangle,
     float yangle,
     float zangle,
-    uint32_t option_bits)    
+    uint32_t option_bits);    
 
 /* puts a 4x4 rotaton matrix with xangle,yangle,zangle degrees into Out
 set flags to 1 to use radians instead. */
