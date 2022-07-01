@@ -1,7 +1,11 @@
 #include <stdint.h>
 
 /**
- * Creates a Size*Size matrix with Coefficient on each element of the main diagonal.
+ * Fills a Size*Size float-compatible matrix with Coefficient on each element of the main diagonal.
+ * 
+ * This works both for float[Size][Size] and float[Size] or any 
+ *     binary-compatible struct or class or union containing such.
+ * Do not use on arrays of pointers as doing so causes undefined behavior.
  *
  * Usage Examples:
  * creating an identity 4x4 matrix:
