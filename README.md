@@ -3,13 +3,13 @@
 A lightweight and fast sugarfree matrices with an assembly friendly ABI.
 
 Contents:
-    - include: contains the header(s) for interfacing with the library.
-    - lib: contains the library file for statically linking to.
-    - src: contains the source files.
-    - obj: contains the object files used to create the library.
-    - tests: some proofs of concepts to check if the library works.
-    - README.md: this file.
-    - build.pl: builds the project, written in Perl because it's my library and I want to use Perl for my building process.
+- include: contains the header(s) for interfacing with the library.
+- lib: contains the library file for statically linking to.
+- src: contains the source files.
+- obj: contains the object files used to create the library.
+- tests: some proofs of concepts to check if the library works.
+- README.md: this file.
+- build.pl: builds the project, written in Perl because it's my library and I want to use Perl for my building process.
 
 Features:
 1. Assembly-compatible ABI/calling convention, as easy to use from C++ as from C as from assembly.
