@@ -30,7 +30,7 @@ void matrix_identityf(void *Out, uint32_t Size, float Coefficient)
 
     uint32_t i;
     uint32_t j;
-    float *lpOut = (float *)Out;
+    float *tmp = (float *)Out;
     
     for (i = 0; i < Size; ++i) {
         for (j = 0; j < Size; ++j) {
@@ -45,7 +45,7 @@ void matrix_identityf(void *Out, uint32_t Size, float Coefficient)
             }
             
             // | Fill the elements of the matrix. 
-            lpOut[__MATRIX_INDEX(Size, i, j)] = val;
+            tmp[__MATRIX_INDEX(Size, i, j)] = val;
         }
     }
     
