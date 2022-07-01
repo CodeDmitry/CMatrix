@@ -31,6 +31,6 @@ mkdir 'lib' unless -d 'lib';
 
 $s = join ' ', @files;
 
-`ar rcs lib/libmatrix.a $s`;
+`ar rcs lib/libcdcmatrix.a $s`;
 
 
