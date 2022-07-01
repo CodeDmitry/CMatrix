@@ -1,9 +1,8 @@
 #ifndef __MATRIX_A6ACC912_1ED2_4C9A_82C4_1872183959E1
-/* everything will be linked, so there's no point of hiding it. 
-   
-   If you need anything less, just create your own header, or 
-   an extern statement in the file that has a dependency. 
-   on CMatrix */
+/*\ 
+|*| If you need anything less, just create your own header,  
+|*| and select what you want to keep or leave out.
+\*/
 #define __MATRIX_A6ACC912_1ED2_4C9A_82C4_1872183959E1
 
 #include <stdint.h>
