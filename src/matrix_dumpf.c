@@ -9,7 +9,8 @@ void matrix_dumpf (
     uint32_t NumberOfRows, 
     uint32_t ColumnsPerRow)
 {   
-    #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) (__RowLength * __RowIndex + __ColumnIndex)
+    #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) 
+        (__RowLength * __RowIndex + __ColumnIndex)
 
     uint32_t i;
     uint32_t j;
@@ -19,7 +20,7 @@ void matrix_dumpf (
             float cur;
             
             cur = ((float *)Matrix)[__MATRIX_INDEX(ColumnsPerRow, i, j)]; 
-            fprintf(Stream, "%.3f", cur);
+            fprintf((FILE *)Stream, "%.3f", cur);
             if (j != ColumnsPerRow - 1) {
                 fputc(' ', Stream);
             }
