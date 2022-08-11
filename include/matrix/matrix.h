@@ -9,14 +9,35 @@
 
 /* implemented */
 
-/* dump a matrix's string representation to a stream. */
+/** 
+ * @brief Dumps the matrix's string representation into the 
+ *     specified stream. 
+ * @param Stream The FILE * into which to dump the matrix string 
+ *     representation.
+ * @param Matrix The pointer to the matrix.
+ * @param NumberOfRows Number of rows in the matrix.
+ * Weak contract: 
+ *     - Stream must be a valid FILE pointer.
+ *     - Matrix must be a valid Matrix pointer.
+ *     - NumberOfRows must be correct.
+ *     - ColumnsPerRow must be correct.
+ */
 extern void matrix_dumpf (
     void *Stream, 
     void *Matrix, 
     uint32_t NumberOfRows, 
     uint32_t ColumnsPerRow );
 
-/* sets Out to an identity matrix scaled by a Coefficient. */
+/** 
+ * @brief Sets Out to an identity matrix scaled by a Coefficient. 
+ * @param Out The target matrix pointer to assign to.
+ * @param Size The size of the rows=columns for the matrix.
+ * @param Coefficient The coefficient to fill the main diagonal with.
+ * Weak contract: 
+ *     - Out pointer must be be able to store the float matrix of 
+ *           the specified(Size x Size) number of rows and columns.
+ *     - ColumnsPerRow must be correct.
+ */
 extern void matrix_identityf (
     void *Out, 
     uint32_t Size, 
