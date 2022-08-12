@@ -13,8 +13,9 @@ Contents:
 
 Features:
 1. Assembly-compatible ABI/calling convention, as easy to use from C++ as from C as from assembly.
-2. Each source file is independant of others, enabling copy-pasting in case you want to make it inlineable.
-3. The Code is relatively short and more or less understandable.
+2. Each function is completely independant of others, and can be compiled as its own file, enabling copy-pasting in case you want to make it inlineable.
+3. None of the functions do any C header imports, the only files that rely on C standard functions are the rotation functions(for sin and cos) and the dump function for fputc and fprintf, but they use a local forward declaration instead of a full C header include.
+4. The Code is relatively short and more or less understandable.
 
 Main Flaws: 
 1. Not inlineable by default, which is a significant speed overhead over just having the whole library as a single header file,
