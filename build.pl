@@ -28,7 +28,7 @@ for (;;) {
     }
 }
 
-# done using 
+# | We are done enumerating the source directory. 
 closedir(DIR);
 
 # Create an 'obj' directory unless it already exists.
