@@ -12,7 +12,6 @@ if ($open_source_dir_result == 0) {
 my @files = ();
 
 # | Find all C source files and add them to the list of files.
-# TODO: deobfuscate, section has excessive reading complexity.
 for (;;) {
     # | readdir returns undef if we have finished reading all the files.
     my $fileName = readdir(DIR);
