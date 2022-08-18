@@ -6,12 +6,9 @@ void matrix_transposef (
     /* in */ uint32_t Rows, 
     /* in */ uint32_t ColumnsPerRow )
 {
-    // | A temporary macro to get flat offset into 
-    // |     the matrix given the row length, row index, 
-    // |     and column index.
-    // |     potentially better to use pointers to 2d 
-    // |     array, but pointers to 2d arrays also have 
-    // |     their own complexity.
+    // | A temporary macro to get flat index of the 
+    // |     element at [rowidx][colidx], given
+    // |     a specified row length(rowlen).
     // | rowlen: Row Length.
     // | rowidx: Row Index.
     // | colidx: Column Index.
@@ -34,5 +31,7 @@ void matrix_transposef (
         }
     }
     
+    // | Release the macro, as this file might
+    // |     get cut/pasted into another file.
     #undef matidx
 }
