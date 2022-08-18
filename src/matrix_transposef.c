@@ -25,9 +25,7 @@ void matrix_transposef (
     
     for (i = 0; i < nr; ++i) {
         for (j = 0; j < nc; ++j) {
-            rm[__MATRIX_INDEX(nc, i, j)] 
-                = gm[__MATRIX_INDEX(nr, j, i)]
-                ;
+            rm[matidx(nc, i, j)] = gm[matidx(nr, j, i)];
         }
     }
     
