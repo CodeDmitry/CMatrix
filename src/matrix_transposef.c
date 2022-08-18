@@ -6,13 +6,17 @@ void matrix_transposef (
     /* in */ uint32_t Rows, 
     /* in */ uint32_t ColumnsPerRow )
 {
-    // | A temporary macro to make indexing more explicit,
-    // |     potentially better to use pointers to 2d.
+    // | A temporary macro to get flat offset into 
+    // |     the matrix given the row length, row index, 
+    // |     and column index.
+    // |     potentially better to use pointers to 2d 
+    // |     array, but pointers to 2d arrays also have 
+    // |     their own complexity.
     // | rowlen: Row Length.
     // | rowidx: Row Index.
     // | colidx: Column Index.
     // | result: offset units to get [rowidx][colidx].
-    #define __MATRIX_INDEX(rowlen, rowidx, colidx) \
+    #define matidx(rowlen, rowidx, colidx) \
         (rowlen*rowidx + colidx)
 
     uint_fast32_t i;
@@ -30,5 +34,5 @@ void matrix_transposef (
         }
     }
     
-    #undef __MATRIX_INDEX
+    #undef matidx
 }
