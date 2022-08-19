@@ -148,8 +148,6 @@ extern void matrix_setRowf (
     /* in */ uint32_t RowIndex,
     /* in */ uint32_t ColumnsPerRow );
 
-/* transposes tha matrix, that is, swaps its rows and columns. */
-
 /** 
  * @brief Transposes the matrix, that is, swaps its 
  *     rows with its columns.
@@ -166,7 +164,7 @@ extern void matrix_setRowf (
  *          dwNumberOfRows*dwColumnsPerRow elements.
  *     - pvResultMatrix is stored in mutable memory.
  */
-extern void matrix_transposef( 
+extern void matrix_transposef ( 
     /* out */ void *pvResultMatrix, 
     /* in */ void *pvGivenMatrix, 
     /* in */ uint32_t dwNumberOfRows, 
