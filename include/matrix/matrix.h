@@ -162,7 +162,8 @@ extern void matrix_setRowf (
  *     - pvResultMatrix and pvGivenMatrix are both 
  *          non-null, non-corrupted memory containing 
  *          dwNumberOfRows*dwColumnsPerRow elements.
- *     - pvResultMatrix is stored in mutable memory.
+ *     - pvResultMatrix is stored in writable memory.
+ *     - pvGivenMatrix is stored in readable memory.
  */
 extern void matrix_transposef ( 
     /* out */ void *pvResultMatrix, 
