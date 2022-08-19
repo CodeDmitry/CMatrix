@@ -23,3 +23,6 @@ Main Flaws:
    rearranging the call to cater to each callee based on prior compilation context rather than being uniform with each callee. 
 2. Not complete, no versioning is implemented and anybody using any particular version is responsible of taking it as a fork and managing
     it themselves.
+    
+Goals: 
+- Make each line of the library cap at 60 characters, to be viewable comfortably on a phone.
