@@ -1,7 +1,10 @@
 #ifndef __MATRIX_A6ACC912_1ED2_4C9A_82C4_1872183959E1
 /*\ 
-|*| If you need anything less, just create your own header,  
-|*| and select what you want to keep or leave out.
+|*| If you need anything less, just create your own
+|*|     header, and select what you want to keep or 
+|*|     leave out. 
+|*| EACH service of this library is COMPLETELY
+|*|     independant of EVERY other service.
 \*/
 #define __MATRIX_A6ACC912_1ED2_4C9A_82C4_1872183959E1
 
