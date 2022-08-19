@@ -65,8 +65,8 @@ extern void matrix_addf (
     
 /* copies column ColumnIndex of In to Out. */
 extern void matrix_getColumnf (
-    /* out notnull */ void *Out,
-    /* in notnull */ void *In,
+    /* out notnull */ void *pvResultMatrix,
+    /* in notnull */ void *pvGivenMatrix,
     /* in */ uint32_t ColumnIndex,
     /* in */ uint32_t NumberOfRows,
     /* in */ uint32_t ColumnsPerRow );
