@@ -4,7 +4,6 @@
 # |     then uses them to create the lib file in
 # |     the lib directory.
 
-
 # | Attempt to open the 'src' directory as DIR, 
 # |     terminate if we cannot find it or 
 # |     if we cannot open it.
