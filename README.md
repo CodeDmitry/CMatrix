@@ -27,3 +27,6 @@ Main Flaws:
 Goals: 
 - Make each line of the library cap at 60 characters, to be viewable comfortably on a phone.
 - Document each service of the library(in the header file) with explicit weak/strong contracts.
+- Limit matrices to 16 bits rather than 32 bits, this would greatly increase their portability,
+    and I do not want to support matrices greater than 16,000*16,000(256,000,000 elements)
+    as it is rediculous except for stress testing.
