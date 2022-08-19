@@ -27,8 +27,6 @@ Main Flaws:
 Goals: 
 - Make each line of the library cap at 60 characters, to be viewable comfortably on a phone.
 - Document each service of the library(in the header file) with explicit weak/strong contracts.
-- Limit matrices to 16 bits rather than 32 bits, this would greatly increase their portability,
+- Limit matrices to 16 bits(uint16_t) rather than 32 bits(uint32_t), this would greatly increase their portability,
     as I do not want to support matrices greater than 16,000x16,000(256,000,000 elements)
-    as it is rediculous except for stress testing. The initial rationale was that 32 bit is faster
-    on most machines, and I cannot use long and int because their size isn't exact, making their
-    use from assembly more complicated than I would like.
+    as it is rediculous except for stress testing. 
