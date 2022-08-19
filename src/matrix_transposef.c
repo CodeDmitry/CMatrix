@@ -3,7 +3,7 @@
 void matrix_transposef (
     /* out */ void *pvResultMatrix, 
     /* in */ void *pvGivenMatrix, 
-    /* in */ uint32_t dwRows, 
+    /* in */ uint32_t dwRowCount, 
     /* in */ uint32_t dwColumnsPerRow )
 {
     // | A temporary macro to get flat index of the 
@@ -20,7 +20,7 @@ void matrix_transposef (
     uint_fast32_t j;
     float *rm = (float *)pvResultMatrix;
     float *gm = (float *)pvGivenMatrix;
-    uint32_t nr = dwRows;
+    uint32_t nr = dwRowCount;
     uint32_t nc = dwColumnsPerRow;
     
     for (i = 0; i < nr; ++i) {
