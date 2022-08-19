@@ -1,4 +1,9 @@
 #!/usr/bin/perl
+# | This Perl script automates compiling each file
+# |     in the src directory to the obj directory,
+# |     then uses them to create the lib file in
+# |     the lib directory.
+
 
 # | Attempt to open the 'src' directory as DIR, 
 # |     terminate if we cannot find it or 
