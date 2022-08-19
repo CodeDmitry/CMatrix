@@ -26,3 +26,4 @@ Main Flaws:
     
 Goals: 
 - Make each line of the library cap at 60 characters, to be viewable comfortably on a phone.
+- Document each service of the library(in the header file) with explicit weak/strong contracts.
