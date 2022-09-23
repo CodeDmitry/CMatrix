@@ -20,7 +20,7 @@ void matrix_dumpf (
             float cur;
             
             cur = ((float *)Matrix)[__MATRIX_INDEX(ColumnsPerRow, i, j)]; 
-            fprintf((FILE *)Stream, "%.3f", cur);
+            fprintf(Stream, "%.3f", cur);
             if (j != ColumnsPerRow - 1) {
                 fputc(' ', Stream);
             }
