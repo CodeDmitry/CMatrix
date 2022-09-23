@@ -47,9 +47,8 @@ if (!(-d 'obj')) {
     mkdir('obj');
 }
 
-# | Use gcc to compile
-# |     each .c file in '/src' to a corresponding '.obj' 
-# |     file in '/obj'.
+# | Use gcc to compile each .c file in '/src' to 
+# |     a corresponding '.obj' file in '/obj'.
 foreach(@cfiles) {
     `gcc src/$_.c -o obj/$_.obj -c`;
 }
