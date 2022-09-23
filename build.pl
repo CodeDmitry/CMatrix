@@ -67,10 +67,10 @@ if (!(-d 'lib')) {
 
 # | A string containing all the object file paths 
 # |     delimited by space.
-my $s = join(' ', @cfiles);
+my $space_delimited_c_files = join(' ', @cfiles);
 
 # | Compile our collection of object files into a 
 # |     static library.
-`ar rcs lib/libcdcmatrix.a $s`;
+`ar rcs lib/libcdcmatrix.a $space_delimited_c_files`;
 
 
