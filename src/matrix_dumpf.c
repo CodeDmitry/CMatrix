@@ -9,7 +9,7 @@ void matrix_dumpf (
     uint32_t NumberOfRows, 
     uint32_t ColumnsPerRow)
 {   
-    #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) 
+    #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) \
         (__RowLength * __RowIndex + __ColumnIndex)
 
     uint32_t i;
