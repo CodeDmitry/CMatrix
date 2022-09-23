@@ -4,10 +4,10 @@ extern int fprintf(void *, const char *, ...);
 extern int fputc(int, void *);
 
 void matrix_dumpf (
-    void *Stream, 
-    void *Matrix, 
-    uint32_t NumberOfRows, 
-    uint32_t ColumnsPerRow)
+    /* in notnull */ void *Stream, 
+    /* in notnull */ void *Matrix, 
+    /* in */ uint32_t NumberOfRows, 
+    /* in */ uint32_t ColumnsPerRow )
 {   
     #define __MATRIX_INDEX(__RowLength, __RowIndex, __ColumnIndex) \
         (__RowLength * __RowIndex + __ColumnIndex)
