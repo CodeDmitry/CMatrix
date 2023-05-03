@@ -22,7 +22,7 @@ void matrix2_rotationf (
     sin_angle = sin(angle);
 
     ((float *)Out)[0] = cos_angle;
-    ((float *)Out)[1] = -1.f *  sin_angle;
+    ((float *)Out)[1] = -1.0f * sin_angle;
     ((float *)Out)[2] = sin_angle;
     ((float *)Out)[3] = cos_angle;    
         
