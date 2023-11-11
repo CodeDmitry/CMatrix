@@ -1,6 +1,6 @@
 # CMatrix
 
-A lightweight and fast sugarfree matrices with an assembly friendly ABI.
+A lightweight and fast sugar-free matrix library with an assembly-friendly ABI.
 
 Contents:
 - include: contains the header(s) for interfacing with the library.
