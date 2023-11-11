@@ -3,11 +3,11 @@
 A lightweight and fast sugar-free matrix library with an assembly-friendly ABI.
 
 Contents:
-- include: contains the header(s) for interfacing with the library.
+- include: contains the headers for interfacing with the library.
 - lib: contains the library file for statically linking to.
 - src: contains the source files.
 - obj: contains the object files used to create the library.
-- tests: some proofs of concepts to check if the library works.
+- tests: some primitive tests to check if the library behaves as expected.
 - README.md: this file.
 - build.pl: builds the project, written in Perl because it's my library and I want to use Perl for my building process.
 
